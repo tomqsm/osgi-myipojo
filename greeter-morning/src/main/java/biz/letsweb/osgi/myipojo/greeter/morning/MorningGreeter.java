@@ -54,7 +54,7 @@ public class MorningGreeter implements Runnable {
         System.out.println("number of hellos: " + hellos.length + " " + System.currentTimeMillis() + " ");
         for (Hello h : hellos) {
             final String greeting = h.sayHello("world");
-            System.out.print(greeting);
+            System.out.println(greeting + " " + h.getClass().getName());
         }
     }
 
