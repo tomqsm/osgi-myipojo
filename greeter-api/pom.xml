@@ -6,13 +6,10 @@
         <artifactId>osgi.myipojo</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>greeter-morning</artifactId>
+    <artifactId>greeter-api</artifactId>
     <packaging>bundle</packaging>
     <dependencies>
-        <dependency>
-            <groupId>biz.letsweb.osgi</groupId>
-            <artifactId>api</artifactId>
-        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -26,7 +23,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <!--<Include-Resource>src/main/resources/config/TestGogoCommand.properties</Include-Resource>-->
                         <Import-Package>*</Import-Package>
-                        <!--<Export-Package>biz.letsweb.osgi.myipojo.api.greeter</Export-Package>-->
+                        <Export-Package>biz.letsweb.osgi.myipojo.api.greeter</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
@@ -47,5 +44,5 @@
             </plugin>
         </plugins>
     </build>
-    <name>greeter-morning</name>
+    <name>greeter-api</name>
 </project>
