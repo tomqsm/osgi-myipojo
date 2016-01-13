@@ -9,7 +9,7 @@
     <artifactId>greeter-hello</artifactId>
     <packaging>bundle</packaging>
     <dependencies>
-        <dependency>
+        <!--        <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
         </dependency>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.ipojo.annotations</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>biz.letsweb.osgi</groupId>
             <artifactId>api</artifactId>
