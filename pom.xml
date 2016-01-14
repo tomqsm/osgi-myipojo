@@ -6,35 +6,52 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>api</module>
         <module>greeter-hello</module>
-        <module>greeter-morning</module>
+        <module>greeter-runner</module>
+        <module>greeter-command</module>
+        <module>greeter-api</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+    <dependencies>
+        <!--these dependencies are inherited in every module-->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.ipojo.annotations</artifactId>
+            <version>1.12.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.osgi</groupId>
-                <artifactId>org.osgi.core</artifactId>
-                <version>6.0.0</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.osgi</groupId>
-                <artifactId>org.osgi.compendium</artifactId>
-                <version>5.0.0</version>
+                <groupId>biz.letsweb.osgi</groupId>
+                <artifactId>api</artifactId>
+                <version>1.0.0</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
-                <artifactId>org.apache.felix.ipojo.annotations</artifactId>
-                <version>1.12.1</version>
+                <artifactId>org.apache.felix.gogo.runtime</artifactId>
+                <version>0.16.2</version>
                 <scope>provided</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>

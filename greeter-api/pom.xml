@@ -6,17 +6,10 @@
         <artifactId>osgi.myipojo</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>api</artifactId>
+    <artifactId>greeter-api</artifactId>
     <packaging>bundle</packaging>
     <dependencies>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.compendium</artifactId>
-        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -51,4 +44,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>greeter-api</name>
 </project>
