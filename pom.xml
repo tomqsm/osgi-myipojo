@@ -23,6 +23,8 @@
             <artifactId>org.osgi.core</artifactId>
             <version>6.0.0</version>
             <scope>provided</scope>
+            <!--marking dependency optional helps pax runner doesn't install it because it has been loaded from platform definition-->
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -35,8 +37,10 @@
             <artifactId>org.apache.felix.ipojo.annotations</artifactId>
             <version>1.12.1</version>
             <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -54,6 +58,7 @@
 
         </dependencies>
     </dependencyManagement>
+    
     <build>
         <pluginManagement>
             <plugins>
@@ -63,6 +68,19 @@
                     <version>3.0.1</version>
                     <!--The <extensions>true</extensions> line enables arbitrary custom headers-->
                     <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>org.ops4j</groupId>
+                    <artifactId>maven-pax-plugin</artifactId>
+                    <version>1.6.0</version>
+                    <configuration>
+                        <runnner>1.6.0</runnner>
+                        <framework>felix</framework>
+                        <provision>
+                            <param>--log=debug</param>
+                            <param>--definitionURL=file:${basedir}/platformFelix-5.4.0-mvn.xml</param>
+                        </provision>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>
@@ -88,4 +106,5 @@
             </plugins>
         </pluginManagement>
     </build>
+    
 </project>
