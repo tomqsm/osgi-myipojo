@@ -44,18 +44,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>biz.letsweb.osgi</groupId>
-                <artifactId>api</artifactId>
-                <version>1.0.0</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.gogo.runtime</artifactId>
                 <version>0.16.2</version>
                 <scope>provided</scope>
+                <optional>true</optional>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
     
@@ -77,7 +71,7 @@
                         <runnner>1.6.0</runnner>
                         <framework>felix</framework>
                         <provision>
-                            <param>--log=debug</param>
+                            <param>--log=info</param>
                             <param>--definitionURL=file:${basedir}/platformFelix-5.4.0-mvn.xml</param>
                         </provision>
                     </configuration>

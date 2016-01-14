@@ -9,23 +9,12 @@
     <artifactId>greeter-hello</artifactId>
     <packaging>bundle</packaging>
     <dependencies>
-        <!--        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-        </dependency>
         <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.compendium</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.ipojo.annotations</artifactId>
-        </dependency>-->
-        <dependency>
-            <groupId>biz.letsweb.osgi</groupId>
-            <artifactId>api</artifactId>
-            <version>1.0.0</version>
-            <type>jar</type>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>greeter-api</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
     <build>
