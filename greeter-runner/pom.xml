@@ -10,8 +10,11 @@
     <packaging>bundle</packaging>
     <dependencies>
         <dependency>
-            <groupId>biz.letsweb.osgi</groupId>
-            <artifactId>api</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>greeter-api</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
     <build>
