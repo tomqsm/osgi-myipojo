@@ -12,11 +12,11 @@ import org.apache.felix.ipojo.annotations.Provides;
 @Component
 @Instantiate
 @Provides
-public class HelloImpl implements Hello {
+public class HelloGreeter implements Hello {
 
     @Override
     public String sayHello(String name) {
-        return "hello :) " + name;
+        return "Simple hello anyway :) " + name;
     }
 
 }
