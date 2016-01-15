@@ -7,6 +7,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>greeter-hello</module>
+        <module>greeter-morning</module>
+        <module>greeter-noon</module>
         <module>greeter-runner</module>
         <module>greeter-command</module>
         <module>greeter-api</module>

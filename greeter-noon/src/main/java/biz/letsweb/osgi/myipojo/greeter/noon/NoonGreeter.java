@@ -1,4 +1,4 @@
-package biz.letsweb.osgi.myipojo.greeter.hello;
+package biz.letsweb.osgi.myipojo.greeter.noon;
 
 import biz.letsweb.osgi.myipojo.api.greeter.Hello;
 import org.apache.felix.ipojo.annotations.Component;
@@ -12,11 +12,11 @@ import org.apache.felix.ipojo.annotations.Provides;
 @Component
 @Instantiate
 @Provides
-public class GoodEveningImpl implements Hello {
+public class NoonGreeter implements Hello {
 
     @Override
     public String sayHello(String name) {
-        return "Good evening :) " + name;
+        return "Good noon-time :) " + name;
     }
 
 }
