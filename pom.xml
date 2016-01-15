@@ -6,6 +6,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
+        <module>greeter-console-log</module>
         <module>greeter-hello</module>
         <module>greeter-morning</module>
         <module>greeter-noon</module>
@@ -24,9 +25,9 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
             <version>6.0.0</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
             <!--marking dependency optional helps pax runner doesn't install it because it has been loaded from platform definition-->
-            <optional>true</optional>
+            <!--<optional>true</optional>-->
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
