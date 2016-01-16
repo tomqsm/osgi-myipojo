@@ -35,10 +35,10 @@
             <name>Apache Felix Gogo Command(0.16.0)</name>
             <url>mvn:org.apache.felix/org.apache.felix.gogo.command/0.16.0</url>
         </bundle>
-        <!--        <bundle>
+        <bundle>
             <name>Apache Felix Gogo Runtime (0.16.2)</name>
             <url>mvn:org.apache.felix/org.apache.felix.gogo.runtime/0.16.2</url>
-        </bundle>-->
+        </bundle>
         <bundle>
             <name>Apache Felix Gogo Shell (0.10.0)</name>
             <url>mvn:org.apache.felix/org.apache.felix.gogo.shell/0.10.0</url>
