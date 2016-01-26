@@ -6,6 +6,7 @@ import org.apache.felix.ipojo.annotations.Instantiate;
 import org.apache.felix.ipojo.annotations.Invalidate;
 import org.apache.felix.ipojo.annotations.Requires;
 import org.apache.felix.ipojo.annotations.Validate;
+import org.osgi.service.log.LogService;
 
 /**
  *
@@ -14,6 +15,9 @@ import org.apache.felix.ipojo.annotations.Validate;
 @Component
 @Instantiate
 public class GreeterRunner implements Runnable {
+
+    @Requires
+    LogService logService;
 
     /**
      *  Delay between two invocations.
@@ -51,6 +55,7 @@ public class GreeterRunner implements Runnable {
      * Invoke hello services.
      */
     public void invokeHelloServices() {
+        logService.log(LogService.LOG_INFO, "... gogging via LogService ... :)");
         System.out.println("number of hellos: " + hellos.length + " " + System.currentTimeMillis() + " ");
         for (Hello h : hellos) {
             final String greeting = h.sayHello("world");
